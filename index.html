@@ -199,6 +199,19 @@ body:before{
 @media(max-width:850px){.about-grid{grid-template-columns:1fr}.about-copy,.feature-list{padding:24px}}
 </style>
 
+
+<style>
+.contact-section{border-top:1px solid rgba(255,255,255,.06)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact-card{display:flex;gap:15px;align-items:flex-start;min-height:150px;padding:25px;text-decoration:none;color:#fff;background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid rgba(255,255,255,.08);border-radius:22px;transition:.28s}
+.contact-card:hover{transform:translateY(-5px);border-color:var(--line);box-shadow:0 18px 45px rgba(0,0,0,.35)}
+.contact-icon{width:52px;height:52px;flex:0 0 52px;border-radius:16px;display:grid;place-items:center;background:rgba(201,149,54,.08);border:1px solid var(--line);font-size:23px}
+.contact-card b{display:block;color:var(--gold2);font-size:15px;margin:2px 0 8px}
+.contact-card span{display:block;color:#aaa;line-height:1.9;font-size:14px}
+.map-note{margin-top:18px;padding:15px 18px;border:1px solid rgba(241,197,107,.15);border-radius:16px;background:rgba(201,149,54,.04);color:#999;display:flex;gap:10px;justify-content:center;text-align:center;font-size:13px;line-height:1.8}
+@media(max-width:850px){.contact-grid{grid-template-columns:1fr}.contact-card{min-height:auto}}
+</style>
+
 </head>
 
 <body>
@@ -214,6 +227,7 @@ body:before{
     <a href="#home" data-i18n="home">سەرەتا</a>
     <a href="#menu" data-i18n="menuNav">مینیو</a>
     <a href="#about" data-i18n="aboutNav">دەربارە</a>
+    <a href="#contact" data-i18n="contactNav">پەیوەندی</a>
   </div>
 
   <div class="langs">
@@ -320,8 +334,29 @@ body:before{
   </div>
 </section>
 
+
+<section class="section contact-section" id="contact">
+  <div class="section-head reveal">
+    <div class="overline">BRJO QASSAB</div>
+    <h2 data-i18n="contactTitle">پەیوەندی و شوێن</h2>
+    <p data-i18n="contactSub">لە هەولێر، گەڕەکی تەیراوە</p>
+  </div>
+  <div class="contact-grid">
+    <a class="contact-card reveal" href="tel:+9647506331411">
+      <div class="contact-icon">📞</div><div><b data-i18n="phoneTitle">ژمارەی پەیوەندی</b><span dir="ltr">0750 633 1411</span></div>
+    </a>
+    <div class="contact-card reveal">
+      <div class="contact-icon">🕐</div><div><b data-i18n="hoursTitle">کاتی کارکردن</b><span data-i18n="hoursText">هەموو ڕۆژانی حەفتە · ٦ی ئێوارە تا ٤ی بەیانی</span></div>
+    </div>
+    <a class="contact-card reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Haji+Abdullah+Hammamchi+Mosque%2C+Erbil%2C+Iraq">
+      <div class="contact-icon">📍</div><div><b data-i18n="addressTitle">ناونیشان</b><span data-i18n="addressText">هەولێر، گەڕەکی تەیراوە، شەقامی ٣٠مەتری، بەرامبەر مزگەوتی حاجی عبداللە حمامچی</span></div>
+    </a>
+  </div>
+  <div class="map-note reveal"><span>📍</span><span data-i18n="mapNote">بە کرتەکردن لەسەر ناونیشان، دەتوانیت شوێنەکە لە Google Maps بکەیتەوە.</span></div>
+</section>
+
 <footer class="footer">
-© 1998 - 2026 <b>BRJO QASSAB</b> · <span data-i18n="rights">هەموو مافەکان پارێزراون</span>
+© 2026 <b>BRJO QASSAB</b> · <span data-i18n="rights">هەموو مافەکان پارێزراون</span>
 </footer>
 
 <script>
@@ -337,6 +372,7 @@ currency:"دینار",aboutTitle:"دەربارەی ئێمە",
 aboutText:"برجۆ قساب — ناوێک بۆ خواردنی خۆش و مینیوێکی ڕوون. ئەم وێبسایتە بۆ ئەوەیە خەڵک بتوانن خواردن و نرخەکان بە ئاسانی ببینن.",
 info1Title:"خواردنی تازە",info1Text:"مینیوی جۆراوجۆر و نرخە ڕوونەکان",
 info2Title:"BRJO QASSAB",info2Text:"تجربەیەکی سادە و مۆدێرن بۆ بینینی مینیو",
+contactNav:"پەیوەندی",contactTitle:"پەیوەندی و شوێن",contactSub:"لە هەولێر، گەڕەکی تەیراوە",phoneTitle:"ژمارەی پەیوەندی",hoursTitle:"کاتی کارکردن",hoursText:"هەموو ڕۆژانی حەفتە · ٦ی ئێوارە تا ٤ی بەیانی",addressTitle:"ناونیشان",addressText:"هەولێر، گەڕەکی تەیراوە، شەقامی ٣٠مەتری، بەرامبەر مزگەوتی حاجی عبداللە حمامچی",mapNote:"بە کرتەکردن لەسەر ناونیشان، دەتوانیت شوێنەکە لە Google Maps بکەیتەوە.",
 rights:"هەموو مافەکان پارێزراون"
 },
 ar:{
@@ -350,6 +386,7 @@ currency:"دينار",aboutTitle:"من نحن",
 aboutText:"برجۆ قصاب — اسم مرتبط بالطعام اللذيذ وقائمة واضحة. هذا الموقع لعرض الأكلات والأسعار بسهولة.",
 info1Title:"أكلات طازجة",info1Text:"قائمة متنوعة وأسعار واضحة",
 info2Title:"BRJO QASSAB",info2Text:"تجربة بسيطة وعصرية لمشاهدة القائمة",
+contactNav:"اتصل بنا",contactTitle:"التواصل والموقع",contactSub:"أربيل، حي تيراوا",phoneTitle:"رقم الهاتف",hoursTitle:"ساعات العمل",hoursText:"يومياً · من 6 مساءً إلى 4 صباحاً",addressTitle:"العنوان",addressText:"أربيل، حي تيراوا، شارع 30 متري، مقابل جامع الحاج عبدالله حمامجي",mapNote:"اضغط على العنوان لفتح الموقع في Google Maps.",
 rights:"جميع الحقوق محفوظة"
 },
 fa:{
@@ -363,6 +400,7 @@ currency:"دینار",aboutTitle:"درباره ما",
 aboutText:"برجۆ قصاب — نامی برای غذای خوشمزه و منویی واضح. این سایت برای نمایش آسان غذاها و قیمت‌هاست.",
 info1Title:"غذای تازه",info1Text:"منوی متنوع و قیمت‌های روشن",
 info2Title:"BRJO QASSAB",info2Text:"تجربه‌ای ساده و مدرن برای دیدن منو",
+contactNav:"تماس",contactTitle:"تماس و موقعیت",contactSub:"اربیل، محله تيراوا",phoneTitle:"شماره تماس",hoursTitle:"ساعات کاری",hoursText:"هر روز · از ساعت ۶ عصر تا ۴ صبح",addressTitle:"آدرس",addressText:"اربیل، محله تيراوا، خیابان ۳۰ متری، روبه‌روی مسجد حاجی عبدالله حمامچی",mapNote:"برای باز کردن موقعیت در Google Maps روی آدرس کلیک کنید.",
 rights:"تمامی حقوق محفوظ است"
 },
 en:{
@@ -376,6 +414,7 @@ currency:"IQD",aboutTitle:"About Us",
 aboutText:"BRJO QASSAB — a name for great food and a clear menu. This website is designed to make food and prices easy to view.",
 info1Title:"Fresh Food",info1Text:"A varied menu with clear prices",
 info2Title:"BRJO QASSAB",info2Text:"A simple, modern menu viewing experience",
+contactNav:"Contact",contactTitle:"Contact & Location",contactSub:"Tairawa, Erbil",phoneTitle:"Phone",hoursTitle:"Opening Hours",hoursText:"Every day · 6:00 PM to 4:00 AM",addressTitle:"Address",addressText:"Erbil, Tairawa, 30 Meter Street, opposite Haji Abdullah Hammamchi Mosque",mapNote:"Click the address to open the location in Google Maps.",
 rights:"All rights reserved"
 }};
 
